@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>REST Countries API</title>
+</head>
+<body>
+    <nav>           
+        <div class="nav-main-text">
+            <h4 class="main-text">Where in the world?</h4>
+        </div>        
+        <button class="toggle-mode">Dark Mode</button>        
+    </nav>
+    <header>
+        <input type="search" id="search-country" placeholder="Search for a country">
+        <select name="region" id="region">
+            <option value="" selected disabled>Filter by region</option>
+            <option value="1">Africa</option>
+            <option value="2">Americas</option>
+            <option value="3">Asia</option>
+            <option value="4">Europe</option>
+            <option value="5">Oceania</option>            
+        </select>
+    </header>
+    <main>
+        <section class="search-country">
+            <button class="btn-back"><- Back</button>
+             <div class="search-country-container"></div> 
+        </section>
+        <section class="grid">            
+        </section>
+    </main>
+    <script src="assets/js/index.js" defer></script>
+</body>
+</html>

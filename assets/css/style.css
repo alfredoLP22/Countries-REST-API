@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-bg: #fff;
+}
+a,button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+html,body{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 35px;
+    width: 100vw;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.37);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-top: 20px;
+}
+.toggle-mode{
+    background-color: inherit;
+    color: inherit;
+    width: auto;
+    padding: 8px;    
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(80, 80, 80, 0.233);
+    border-radius: 2px;
+}
+#search-country{
+    background-color: inherit;
+    color: inherit;
+    width: 80vw;
+    height: 40px;
+    margin: 0 auto;
+    height: auto;
+    padding: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.233);
+    caret-color: red;
+    border: none;
+    border-radius: 3px;
+}
+#search-country:focus{    
+    outline: none;
+}
+#region{
+    background-color: inherit;
+    color: inherit;
+    width: 50vw;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.233);
+    border: none;
+    height: 40px;
+    margin-top: 25px;
+    margin-left: 15px;    
+    border-radius: 3px;
+}
+#region:focus{
+    outline: none;
+    border: none;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+    margin: 45px auto;    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.233);
+    border-radius: 4px;
+}
+.card-flag-img{
+    width: inherit;
+    height: auto;
+    min-height: 200px;
+    max-height: 200px;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.row{
+    display: flex;
+    padding: 5px 10px;
+    overflow-x: auto;
+}
+.card-text{
+    padding: 5px 20px;
+}
+.strong-text{
+    padding: 0 10px;
+}
+.search-country{
+    background-color: #fefefe;    
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+    left: -150%;
+    transition: left 0.5s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.flag-img-search{
+    width: inherit;
+    height: auto;
+    min-height: 200px;
+    max-height: 200px;
+    background-image: url(https://restcountries.eu/data/afg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.btn-back{
+    background-color: inherit;
+    color: inherit;
+    width: 25vw;
+    padding: 8px;
+    margin: 15px 20px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.233);
+    border-radius: 2px;
+}
+.search-country-container{
+    width: 85vw;
+    margin: 15px auto;    
+}
+.border-countries{
+    display: flex;
+    flex-direction: column;    
+    padding: 0;
+    margin: 0;
+}
+.tags{
+    width: auto;
+    padding: 10px 8px;
+    margin: 5px 8px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.233);
+    border-radius: 2px;
+}
+.dark-mode{
+    background-color: rgb(20, 17, 31);
+    color: #fefefe
+}
+.dark-mode > *{
+    background-color: rgb(20, 17, 31);
+    color: #fefefe
+}
+
+@media screen and (min-width: 1220px){
+    .grid{
+        display: grid;
+        width: 90vw;
+        margin: 20px auto;
+        background-color: inherit;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .item{
+        width: 90%;
+    }
+    .card-flag-img{
+        width: 100%;
+        height: inherit;
+    }    
+    .search-country-container{
+        display: flex;
+        height: 100vh;
+    }
+    .flag-img-search{
+        height: auto;
+        min-height: 200px;
+        max-height: 60vh;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw;
+        margin-top: 20px;
+    }
+    #search-country{
+        width: 20vw;
+        height: 40px;
+        margin: 0 15px;        
+        padding: 8px;
+    }
+    #search-country:focus{    
+        outline: none;
+    }
+    #region{
+        width: 30vw;
+        padding: 12px;        
+        height: 40px;
+        margin-top: 0;
+        margin-right: 25px;            
+    }
+}
